@@ -40,10 +40,12 @@ nav li {
     display: inline-block;
     width: 23%;
     padding: 20px;
+    clear: left;
+    margin: 10px;
 }
 
 .intro {
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.8);
     color:goldenrod;
     margin: 25px;
 }
@@ -58,15 +60,19 @@ nav li {
     text-align: center;
     font-weight: bold;
     color: azure;
+    background-color: rgba(212, 102, 22, 0.4);
+    margin: 25px;
 }
 
 .reasons ul {
     list-style-type: square;
+    width: fit-content;
 }
 
 .reasons li {
     padding-left: 25px;
-    color: beige;
+    font-weight: bold;
+    background-color: rgba(212, 102, 22, 0.4);
 }
 
 .about {
