@@ -3,6 +3,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  } 
+  
 body {
     background-image: url("./bg1.jpg");
     background-size: 100%;
@@ -65,11 +70,11 @@ nav li {
 }
 
 .about {
-    background-color: aliceblue;
+    background-color: rgba(43, 152, 248, 0.5);
     padding: 25px;
     margin: 25px;
-    opacity: 0.5;
     font-weight: 900;
+    color: rgb(182, 0, 0);
 }
 
 .facebook {
