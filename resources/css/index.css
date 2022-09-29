@@ -1,99 +1,274 @@
+/* 1. Page Styling */
 * {
+    left: 0px;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-@viewport {
-    width: device-width ;
-    zoom: 1.0 ;
-  } 
-  
-body {
-    background-image: url("./bg1.jpg");
-    background-size: 100%;
+main {
+    margin-top: 10rem;/* Offset main section to accomodate for fixed header */
+    flex-direction: column;
 }
 
-h1 {
-    text-align: center;
-    font-weight: 900;
-    font-size: 50px;
-    padding-top: 50px;
+.container {
+    display: flex;
 }
 
-h2 {
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-nav {
-    background-color: grey;
-    margin: 25px;
-}
-
-nav h3 {
-    text-align: center;
-    font-weight: bold;
-    padding: 25px;
-}
-
-nav li {
-    display: inline-block;
-    width: 23%;
-    padding: 20px;
-    clear: left;
-    margin: 10px;
-}
-
-.intro {
-    background-color: rgba(128, 128, 128, 0.8);
-    color:goldenrod;
-    margin: 25px;
-}
-
-.reasons {
+/* 2. Header section */
+header {
+    top: 0px;
+    position: fixed;
+    height: 10rem;
     width: 100%;
-    padding: 50px 0;
-    
+    background-color: #A7DE9E;
+    color: #2F2F4B;
+    border-bottom: 1px solid black;
 }
 
-.reasons h3 {
-    text-align: center;
-    font-weight: bold;
-    color: azure;
-    background-color: rgba(212, 102, 22, 0.4);
-    margin: 25px;
+header .container {
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 100%;
 }
 
-.reasons ul {
-    list-style-type: square;
+header .container img {
+    width: 6rem;
+    margin: auto 0;
+    margin-left: 1rem;
+}
+
+header .container ul {
+    display: flex;
+    list-style: none;
+}
+
+header .container li {
+    margin: 0 5rem;
     width: fit-content;
 }
 
-.reasons li {
-    padding-left: 25px;
+header .container li a {
+    font-size: 2rem;
+}
+
+header .container li a:link {
+    text-decoration: none;
+    color: #2F2F4B;
+}
+
+header .container li a:visited {
+    text-decoration: none;
+    color: #2F2F4B;
+}
+
+header .container li a:hover {
+    cursor: pointer;
+    color: red;
+}
+
+@media only screen and (max-width: 1200px) {
+    header .container li {
+        margin: 0 2rem;
+    }
+
+    header .container li a {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header .container li {
+        margin: 0 0.75rem;
+    }
+
+    header .container li a {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header .container li {
+        margin: 0 0.5rem;
+    }
+
+    header .container li a {
+        font-size: 0.65rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    header .container ul {
+        padding-left: 0.75rem;
+    }
+
+    header .container li a {
+        font-size: 0.5rem;
+    }
+}
+
+/* 3. Page hero section */
+.hero {
+    height: auto;
+    width: 100%;
+    background-image: url(../images/green\ abstract\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: rgb(53, 53, 53);
+    padding: 2rem;
+}
+
+main .intro {
+    background-color: rgba(189, 223, 139, 0.7);
+    width: 40%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
     font-weight: bold;
-    background-color: rgba(212, 102, 22, 0.4);
 }
 
-.about {
-    background-color: rgba(43, 152, 248, 0.5);
-    padding: 25px;
-    margin: 25px;
-    font-weight: 900;
-    color: rgb(182, 0, 0);
+.hero h2 {
+    line-height: 1.5;
+    font-size: 3rem;
 }
 
-.facebook {
-    width: 25px;
-    height: 25px;
+@media only screen and (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero h2 {
+        line-height: 1.3;
+        font-size: 2.5rem;
+    }
 }
 
-.instagram {
-    width: 25px;
-    height: 25px;
+@media only screen and (max-width: 1000px) {
+    main .intro {
+        width: 80%;
+    }
 }
 
-.linkedin {
-    width: 25px;
-    height: 25px;
+@media only screen and (max-width: 800px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        line-height: 1.2;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    main .intro {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        line-height: 1;
+        font-size: 1rem;
+    }
+}
+
+/* 4. Our mission section */
+.mission {
+    clear: both;
+    height: auto;
+    width: 100%;
+    background-image: url(../images/blue\ network\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    color: aliceblue;
+    padding: 4rem;
+}
+
+.mission .text {
+    background-color: rgba(98, 87, 201, 0.7);
+    width: 30%;
+    height: auto;
+    padding: 0.75rem;
+}
+
+.mission h2 {
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+.mission li {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .mission h2 {
+        font-size: 3rem;
+    }
+
+    .mission li {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .mission .text {
+        width: 70%;
+        padding: auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .mission .text {
+        width: 90%;
+    }
+
+    .mission h2 {
+        font-size: 2.5rem;
+    }
+
+    .mission li {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mission .text {
+        width: 100%;
+        padding: 0.5rem 0px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .mission h2 {
+        font-size: 1rem;
+    }
+
+    .mission li {
+        font-size: 0.75rem;
+    }
+}
+
+/* 5. Footer */
+footer {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+    footer {
+        font-size: 1rem;
+    }
 }
